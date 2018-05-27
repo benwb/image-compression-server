@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  image-service:
+    build: .
+    volumes:
+      - static-images:/usr/share/nginx/static/images
+    ports:
+      - '8080:8080'
+
+volumes:
+  static-images:
+    driver: local
